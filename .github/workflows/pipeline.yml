@@ -45,6 +45,7 @@ jobs:
         env:
           HEROKU_APP_NAME: fullstack-pokedex23425
   tag_release:
+    if: ${{ github.event_name == 'push' }}
     needs: [simple_deployment_pipeline]
     runs-on: ubuntu-latest
     steps:
