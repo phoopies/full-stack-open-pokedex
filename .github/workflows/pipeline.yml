@@ -1,7 +1,5 @@
 name: Deployment pipeline
 
-
-
 on:
   push:
     branches:
@@ -36,7 +34,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: $HEROKU_APP_NAME
           heroku_email: sotajagic@gmail.com
-          healthcheck: "https://$HEROKU_APP_NAME.herokuapp.com/health"
+          healthcheck: "https://${{env.HEROKU_APP_NAME}}.herokuapp.com/health"
           checkstring: "ok"
         env:
           HEROKU_APP_NAME: fullstack-pokedex23425
