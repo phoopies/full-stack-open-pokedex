@@ -36,5 +36,6 @@ jobs:
           heroku_email: sotajagic@gmail.com
           healthcheck: "https://${{env.HEROKU_APP_NAME}}.herokuapp.com/health"
           checkstring: "ok"
+          rollbackonhealthcheckfailed: true
         env:
           HEROKU_APP_NAME: fullstack-pokedex23425
