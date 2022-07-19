@@ -34,6 +34,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: $HEROKU_APP_NAME
           heroku_email: sotajagic@gmail.com
+          delay: 15
           healthcheck: "https://${{env.HEROKU_APP_NAME}}.herokuapp.com/health"
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
